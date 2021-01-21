@@ -10,11 +10,19 @@
     <script src="https://kit.fontawesome.com/cf19c7517f.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
+  <body class="bg_color">
+   <% if flash[:notice] %>
+   <div class="alert alert-success text-center">
+     <p class="notice mb-0"><%= notice %></p>
+   </div>
+   <% end %>
+   <% if flash[:alert] %>
+   <div class="alert alert-danger">
+     <p class="alert mb-0"><%= alert %></p>
+   </div>
+   <% end %>
    <header class="sticky-top my-background">
-      <nav class="navbar navbar-expand-lg bg-danger justify-content-between">
+      <nav class="navbar navbar-expand-lg bg-white justify-content-between">
         <div>
           <%= link_to 'MOTOcrazy!!', root_path, class: "navbar-brand logo font-weight-bold"%>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +32,7 @@
         <div class="justify-content-center">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <%= link_to 'Home', root_path, class: "nav-link orange_color" %>
+              <%= link_to 'Home', articles_path, class: "nav-link orange_color" %>
             </li>
             <li class="nav-item">
               <%= link_to 'Tech', root_path, class: "nav-link links_color" %>
@@ -72,7 +80,7 @@
 
     <footer class="d-flex navbar fixed-bottom justify-content-between align-items-center">
       <div class="w-25 align-items-center">
-        <%= link_to 'MOTOcrazy!!', root_path, class: "text-white font-weight-bold"%>
+        <%= link_to 'MOTOcrazy!!', articles_path, class: "text-white font-weight-bold"%>
       </div>
       <nav class="w-50 py-1">
         <ul class="nav d-flex justify-content-center">

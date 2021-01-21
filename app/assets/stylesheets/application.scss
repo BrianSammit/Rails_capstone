@@ -1,1 +1,22 @@
 @import "bootstrap/scss/bootstrap";
+
+$bg-color: rgb(78, 68, 62);
+$orange-color:rgb(253, 96, 0);
+$text-color: #989591;
+$category-color: #f99b00;
+
+footer {
+    background-color: $bg-color;
+}
+
+.orange_color {
+    color: $orange-color;
+}
+
+.logo {
+    color: $bg-color;
+}
+
+.links_color {
+    color: $text-color;
+}

@@ -19,7 +19,12 @@
     <%= f.input :body %>
   </div>
 
-   <div class="form-inputs yellow_color">
+  <div class="form-inputs yellow_color">
+    <%= f.label :image %>
+    <%= f.file_field :image%>
+  </div>
+  
+  <div class="form-inputs yellow_color">
     <%= f.association :category %>
   </div>
 

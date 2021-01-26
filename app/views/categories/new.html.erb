@@ -1,5 +1,16 @@
-<h1>New Category</h1>
+<div class="d-flex bg-white w-100 justify-content-center">
+  <div class="w-25 p-4 m-3 bg_color rounded">
 
-<%= render 'form', category: @category %>
+    <h1 class="my-title m-3 text-center yellow_color">New Category</h1>
 
-<%= link_to 'Back', categories_path %>
+    <div>
+      <%= render 'form', category: @category %>
+    </div>
+
+    <div class="text-center">
+      <%= link_to 'Back', categories_path, class: 'btn btn-outline-warning' %>
+    </div>
+
+
+  </div>
+</div>

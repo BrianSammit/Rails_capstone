@@ -1,6 +1,17 @@
-<h1>Editing Article</h1>
+<div class="d-flex bg-white w-100 justify-content-center">
+  <div class="w-25 p-4 m-3 bg_color rounded">
 
-<%= render 'form', article: @article %>
+    <h1 class="my-title m-3 text-center yellow_color">Editing Article</h1>
 
-<%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>
+     <%= render 'form', article: @article %>
+
+    <div class="text-center mb-2">
+      <%= link_to 'Show', @article, class: 'btn btn-outline-warning' %>
+    </div>
+
+    <div class="text-center">
+      <%= link_to 'Back', articles_path, class: 'btn btn-outline-warning' %>
+    </div>
+
+  </div>
+</div>

@@ -5,26 +5,35 @@ $orange-color:rgb(253, 96, 0);
 $text-color: #989591;
 $category-color: #f99b00;
 
-footer {
-    background-color: $bg-color;
+#page_container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.footer {
+  background-color: $bg-color;
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  height: 2.5rem;  
 }
 
 .orange_color {
-    color: $orange-color;
+  color: $orange-color;
 }
 
 .logo {
-    color: $bg-color;
+  color: $bg-color;
 }
 
 .links_color {
-    color: $text-color;
+  color: $text-color;
 }
 
 .bg_color {
-    background-color: $bg-color;
+  background-color: $bg-color;
 }
 
 .alert {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }

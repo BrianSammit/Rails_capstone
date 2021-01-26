@@ -3,7 +3,7 @@
 $bg-color: rgb(78, 68, 62);
 $orange-color:rgb(253, 96, 0);
 $text-color: #989591;
-$category-color: #f99b00;
+$yellow-color: #f99b00;
 
 #page_container {
   position: relative;
@@ -13,21 +13,36 @@ $category-color: #f99b00;
 .footer {
   background-color: $bg-color;
   position: absolute;
-  bottom: 2px;
+  bottom: 0px;
   width: 100%;
-  height: 2.5rem;  
+}
+
+.yellow_color {
+  color: $yellow-color;
 }
 
 .orange_color {
   color: $orange-color;
 }
 
+.orange_color:hover {
+  color: white;
+}
+
 .logo {
+  color: $orange-color;
+}
+
+.logo:hover {
   color: $bg-color;
 }
 
 .links_color {
   color: $text-color;
+}
+
+.links_color:hover {
+  color: $orange-color;
 }
 
 .bg_color {
@@ -36,4 +51,12 @@ $category-color: #f99b00;
 
 .alert {
   margin-bottom: 0;
+}
+
+.dropdown {
+  background-color: $orange-color;
+}
+
+.dropdown-menu {
+  background-color: $bg-color;
 }

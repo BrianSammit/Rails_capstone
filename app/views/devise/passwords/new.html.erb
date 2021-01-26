@@ -1,7 +1,7 @@
 <div class="d-flex bg-white w-100 justify-content-center">
   <div class="w-25 p-4 m-3 bg_color rounded">
 
-    <h2 class="my-title m-3 text-center orange_color">Forgot your password?</h2>
+    <h2 class="my-title m-3 text-center yellow_color">Forgot your password?</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= f.error_notification %>
@@ -10,11 +10,11 @@
      <%= f.input :email,
                  required: true,
                  autofocus: true,
-                 input_html: { autocomplete: "email" } %>
+                 input_html: { autocomplete: "email" }%>
     </div>
  
     <div class="form-actions">
-     <%= f.button :submit, "Send me reset password instructions", class: 'text-white'%>
+     <%= f.button :submit, "Send me reset password instructions", class: 'yellow_color'%>
     </div>
 
     <div class="text-center">

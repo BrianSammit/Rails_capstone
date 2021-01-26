@@ -268,7 +268,7 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.4)
   sass-rails (>= 6)
   selenium-webdriver
-  simple_form (~> 5.0, >= 5.0.3)
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

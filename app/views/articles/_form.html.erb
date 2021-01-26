@@ -1,7 +1,7 @@
-<%= form_with(model: article, local: true) do |form| %>
+<%= simple_form_for(@article) do |f| %>
   <% if article.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+      <h2><%= pluralize(article.errors.count, "error") %> Prohibited this article from being saved:</h2>
 
       <ul>
         <% article.errors.full_messages.each do |message| %>
@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="form-inputs yellow_color">
+    <%= f.input :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <div class="form-inputs yellow_color">
+    <%= f.input :body %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+   <div class="form-inputs yellow_color">
+    <%= f.association :category %>
+  </div>
+
+  <div class="btn btn-outline-warning mb-2">
+    <%= f.submit %>
   </div>
 <% end %>

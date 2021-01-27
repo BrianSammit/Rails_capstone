@@ -1,12 +1,13 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /categories
   # GET /categories.json
   def index
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
-      @articles = Article.where(category: @category)
+      @articles = Article.where(category: @category).order(:cached_votes_score => :asc)
     else
       @articles = Article.all
     end

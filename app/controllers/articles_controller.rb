@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
   before_action :authenticate_user!
 
   # GET /articles
@@ -7,9 +7,9 @@ class ArticlesController < ApplicationController
   def index
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
-      @articles = Article.where(category: @category)
+      @articles = Article.where(category: @category).order(:cached_votes_score => :asc)
     else
-      @articles = Article.all
+      @articles = Article.all.order(:cached_votes_score => :asc)
     end
   end
  
@@ -67,6 +67,17 @@ class ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def upvote
+    @article.upvote_from current_user
+    redirect_to categories_path
+  end
+  
+  def downvote
+    @article.downvote_from current_user
+    redirect_to categories_path
+  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

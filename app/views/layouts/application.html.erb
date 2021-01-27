@@ -57,9 +57,16 @@
           <div class="justify-content-center text">
             <ul class="navbar-nav">
               <% if current_user %>
-                <li class="nav-item">
                 <a class="nav-link text-uppercase links_color font-weight-bolder">
                   <%= current_user.name.capitalize%>
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link links_color" href="#!">|</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-item">
+                  <%= link_to 'Create Article', new_article_path, class: "nav-link text-uppercase links_color font-weight-bolder" %>
                 </a>
                 </li>
                 <li class="nav-item">

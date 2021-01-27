@@ -36,7 +36,7 @@
                 <%= link_to 'Home', root_path, class: "nav-link links_color font-weight-bolder text-uppercase" %>
               </li>
                 <% Category.where(display_in_navbar: true).each do |cat|%>
-                <%= link_to cat.name, cat, class: "nav-link links_color font-weight-bolder text-uppercase"%>
+                <%= link_to cat.name, categories_path(category: cat.name) , class: "nav-link links_color font-weight-bolder text-uppercase"%>
                 <% end %>
               <li>
               <div class="dropdown rounded">
@@ -47,7 +47,7 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                   <% Category.where(display_in_navbar: false).each do |cat|%>
-                  <%= link_to cat.name, cat, class: "dropdown-item links_color font-weight-bolder text-uppercase"%>
+                  <%= link_to cat.name, categories_path(category: cat.name), class: "dropdown-item links_color font-weight-bolder text-uppercase"%>
                   <% end %>
                   <%= link_to "new category", new_category_path, class: "dropdown-item orange_color font-weight-bolder text-uppercase"%>
                 </div>

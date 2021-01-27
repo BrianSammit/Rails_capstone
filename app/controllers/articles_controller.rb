@@ -5,11 +5,12 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+    @categories = Category.all
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
-      @articles = Article.where(category: @category).order(:cached_votes_score => :asc)
+      @articles = Article.where(category: @category).order(:cached_votes_score => :desc)
     else
-      @articles = Article.all.order(:cached_votes_score => :asc)
+      @articles = Article.all.order(:cached_votes_score => :desc)
     end
   end
  

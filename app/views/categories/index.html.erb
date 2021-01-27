@@ -23,19 +23,19 @@
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td>  <div class="caption" style="text-align:center;">
 
-           <%= link_to like_article_path(article), class: "like", method: :put do %>
-             <button type="button" class="btn btn-info" aria-label="left Align">
-              <span><i class="far fa-thumbs-up"></i></span>
-              <span><%= article.get_upvotes.size%></span>
-             </button>
-           <% end %>
-       
-           <%= link_to unlike_article_path(article), class: "like", method: :put do %>
-             <button type="button" class="btn btn-info" aria-label="left Align">
-              <span><i class="far fa-thumbs-down"></i></span>
-              <span><%= article.get_downvotes.size%></span>
-             </button>
-           <% end %>
+        <%= link_to like_article_path(article), class: "like", method: :put do %>
+          <button type="button" class="btn btn-info" aria-label="left Align">
+           <span><i class="far fa-thumbs-up"></i></span>
+           <span><%= article.get_upvotes.size%></span>
+          </button>
+        <% end %>
+    
+        <%= link_to unlike_article_path(article), class: "like", method: :put do %>
+          <button type="button" class="btn btn-info" aria-label="left Align">
+           <span><i class="far fa-thumbs-down"></i></span>
+           <span><%= article.get_downvotes.size%></span>
+          </button>
+        <% end %>
     
           </div>
         </td>  

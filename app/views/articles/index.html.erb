@@ -1,4 +1,3 @@
-
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -31,33 +30,22 @@
   </div>
 </div>
 
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Category</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.body %></td>
-        <td><%= article.category.name %></td>
-          <% if article.image.attached? %>
-        <td><%= image_tag article.image, class: "image" %></td>
-        <% end %>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
-      </tr>
+<div class="d-flex justify-content-around" >
+  <% @articles.each do |article| %>
+  <div class="card">
+    <% if article.image.attached? %>
+    <td><%= image_tag article.image, class: "image_main" %></td>
     <% end %>
-  </tbody>
-</table>
+    <div class="card-img-overlay">
+      <p class="card-text"><%=link_to article.category.name, categories_path(category: article.category.name), class: " text-white font-weight-bolder line" %></p>
+    </div>
+    <div class="carousel-caption">
+      <p><%= article.body %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+
 

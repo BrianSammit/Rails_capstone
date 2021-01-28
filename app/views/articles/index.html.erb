@@ -8,14 +8,16 @@
       <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
     </ol> 
     <div class="carousel-inner" role="listbox">
-      <% @articles.each_with_index do |article, i| %>
+      <% @articles.first(5).each_with_index do |article, i| %>
         <div class="carousel-item <%= "active " if i==0 %>">
               <% if article.image.attached? %>
               <td><%= image_tag article.image, class: "image_ban" %></td>
               <% end %>
             <div class="carousel-caption d-none d-md-block">
             <h3><%= article.title %></h3>
-            <p><%= article.body %></p>
+            <div class="p_article_1">
+              <p><%= article.body %></p>
+            </div>
             </div>
         </div>
       <% end %>
@@ -31,7 +33,7 @@
 </div>
 
 <div class="d-flex justify-content-around" >
-  <% @articles.each do |article| %>
+  <% @articles.first(4).each do |article| %>
   <div class="card">
     <% if article.image.attached? %>
     <td><%= image_tag article.image, class: "image_main" %></td>
@@ -39,13 +41,12 @@
     <div class="card-img-overlay">
       <p class="card-text"><%=link_to article.category.name, categories_path(category: article.category.name), class: " text-white font-weight-bolder line" %></p>
     </div>
-    <div class="carousel-caption">
+    <div class="carousel-caption p_article_1">
       <p><%= article.body %></p>
     </div>
   </div>
   <% end %>
 </div>
-
 
 
 

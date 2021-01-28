@@ -15,11 +15,15 @@ $yellow-color: #f99b00;
   position: absolute;
   bottom: 0px;
   width: 100%;
-  height: 2.5rem;
+  height: auto;
 }
 
 .yellow_color {
   color: $yellow-color;
+}
+
+.yellow_color:hover {
+  color: none;
 }
 
 .orange_color {
@@ -28,6 +32,14 @@ $yellow-color: #f99b00;
 
 .orange_color:hover {
   color: white;
+}
+
+.orange_color_art {
+  color: $orange-color;
+}
+
+.orange_color_art:hover {
+  color: $bg-color;
 }
 
 .logo {
@@ -50,6 +62,10 @@ $yellow-color: #f99b00;
   background-color: $bg-color;
 }
 
+.bg_color_title {
+  color: $bg-color;
+}
+
 .alert {
   margin-bottom: 0;
 }
@@ -67,6 +83,11 @@ $yellow-color: #f99b00;
   height: auto;
 }
 
+.image_in {
+  width: 400px;
+  height: 250px;
+}
+
 .image_main {
   width: 334px;
   height: 230px;
@@ -79,4 +100,23 @@ $yellow-color: #f99b00;
 
 .line {
   border-bottom: 5px solid $yellow-color;
+}
+
+.container_art {
+  width: 336px;
+  height: 300px;
+
+}
+
+.p_article {
+  height: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  white-space: initial;
+}
+
+.p_article_1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

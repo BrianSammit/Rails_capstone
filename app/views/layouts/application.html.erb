@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/cf19c7517f.js" crossorigin="anonymous"></script>
   </head>
 
-  <body class="bg_color">
+  <body>
    <div id="page_container">
      <% if flash[:notice] %>
      <div class="alert alert-success text-center">
@@ -22,7 +22,7 @@
        <p class="alert mb-0"><%= alert %></p>
      </div>
      <% end %>
-     <header class="sticky-top my-background">
+     <header class="sticky-top bg_color">
         <nav class="navbar navbar-expand-lg bg-white justify-content-between">
           <div>
             <%= link_to 'MOTOcrazy!!', root_path, class: "navbar-brand logo font-weight-bold"%>
@@ -50,6 +50,7 @@
                   <%= link_to cat.name, categories_path(category: cat.name), class: "dropdown-item links_color font-weight-bolder text-uppercase"%>
                   <% end %>
                   <%= link_to "new category", new_category_path, class: "dropdown-item orange_color font-weight-bolder text-uppercase"%>
+                  <%= link_to "all articles", categories_path, class: "dropdown-item orange_color font-weight-bolder text-uppercase"%>
                 </div>
                 </div>
               </li>
@@ -94,12 +95,13 @@
         </nav>
       </header>
       
+
       <div>
-         <%= yield %>
+        <%= yield %>
       </div>
       <br>
       <br>
-      <footer class="footer navbar justify-content-between align-items-center">
+      <footer class="footer navbar justify-content-between align-items-center bg_color">
         <div class="w-25 align-items-center">
           <%= link_to 'MOTOcrazy!!', root_path, class: "text-white font-weight-bold"%>
         </div>

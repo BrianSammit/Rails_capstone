@@ -7,10 +7,10 @@ Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstud
 
 In the original project, the forms, and the article doesn't have design, so I created my designs trying to follow the guidelines of the given design.
 
-![screenshot](screenshots/Screenshot-2)
-![screenshot](screenshots/Screenshot-1)
-![screenshot](screenshots/Screenshot-3)
-![screenshot](screenshots/Screenshot-4)
+![screenshot](screenshots/Screenshot-2.png)
+![screenshot](screenshots/Screenshot-1.png)
+![screenshot](screenshots/Screenshot-3.png)
+![screenshot](screenshots/Screenshot-4.png)
 
 ## Live demo
 

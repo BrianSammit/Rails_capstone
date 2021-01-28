@@ -1,24 +1,77 @@
-# README
+# Rails Capstone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Ruby on Rails capstone project that is based on lifestyle articles website. I personalize the content to be a motorcicles articles. 
 
-Things you may want to cover:
+You can see the original design [here](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
+Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
-* Ruby version
+In the original project, the forms, and the article doesn't have design, so I created my designs trying to follow the guidelines of the given design.
 
-* System dependencies
+![screenshot](screenshots/Screenshot-2)
+![screenshot](screenshots/Screenshot-1)
+![screenshot](screenshots/Screenshot-3)
+![screenshot](screenshots/Screenshot-4)
 
-* Configuration
+## Live demo
 
-* Database creation
+## Video
 
-* Database initialization
+## Built With
 
-* How to run the test suite
+- Ruby
+- Ruby on rails
+- Capybara / Rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+## Pre-requisites
 
-* Deployment instructions
+- Ruby 2.7.0
+- Rails gem
+- Bundle
 
-* ...
+## How to start the project from your Local enviroment
+
+- Open your terminal and cd where you can store the project
+- Run the following command - `git clone https://github.com/BrianSammit/Rails_capstone.git`
+- Cd into the directory - `cd Rails_capstone`
+- Then run `Bundle install`
+- Run `rails db:migrate`
+- Run `rails server` or `rails s`
+- Open your browser
+- Type `http://localhost:3000/`
+
+
+## How to test it
+
+- Open your terminal 
+- Cd into the directory - `cd Rails_capstone` 
+- Then run `rspec`
+- You should see the test results. 
+
+## Author
+
+👤 **Brian Cruz**
+
+- Github: [@githubhandle](https://github.com/BrianSammit)
+- Twitter: [@twitterhandle](https://twitter.com/cruzsammit)
+- Linkedin: [linkedin](https://www.linkedin.com/in/brian-sammit-cruz-rodriguez-5877551a8/)
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/BrianSammit/Rails_capstone/pulls).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- The Odin Project
+- Rails guides
+- Microvers
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.![]

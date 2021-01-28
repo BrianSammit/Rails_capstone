@@ -5,6 +5,7 @@ This is the Ruby on Rails capstone project that is based on lifestyle articles w
 You can see the original design [here](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
 Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
+On the navbar, I include a button for more categories because I want to include all the categories existing for the topic.
 In the original project, the forms, and the article doesn't have design, so I created my designs trying to follow the guidelines of the given design.
 
 ![screenshot](screenshots/Screenshot-2.png)

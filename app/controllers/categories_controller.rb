@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
       @articles = Article.all.order(:cached_votes_score => :desc)
     end
   end
-
+  
   # GET /categories/1
   # GET /categories/1.json
   def show  

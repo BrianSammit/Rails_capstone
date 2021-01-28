@@ -1,4 +1,4 @@
-<div class="d-flex flex-wrap"> 
+<div class="d-flex flex-wrap">
   <% @articles.each do |article| %>
   <div class="media">
     <% if article.image.attached? %>
@@ -13,3 +13,14 @@
   </div>
   <% end %>
 </div> 
+
+<%# <div class="container-fluid h-100"> %>
+  <%# <div class="row"> %>
+    <%# <% @articles.each_slice(2) do |a1, b1| %> %>
+      <%# <%= count_type(a1, @count) %> %>
+      <%# <%= count_type(b1, @count) %> %>
+      <%# <% @count += 1 %> %>
+    <%# <%end%> %>
+      <%#  %>
+  <%# </div> %>
+<%# </div> %>

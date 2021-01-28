@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :categories
+  resources :categories, only: [:index]
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :articles do
     member do

@@ -49,7 +49,6 @@
                   <% Category.where(display_in_navbar: false).each do |cat|%>
                   <%= link_to cat.name, categories_path(category: cat.name), class: "dropdown-item links_color font-weight-bolder text-uppercase"%>
                   <% end %>
-                  <%= link_to "new category", new_category_path, class: "dropdown-item orange_color font-weight-bolder text-uppercase"%>
                   <%= link_to "all articles", categories_path, class: "dropdown-item orange_color font-weight-bolder text-uppercase"%>
                 </div>
                 </div>

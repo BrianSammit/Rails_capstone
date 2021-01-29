@@ -102,7 +102,5 @@ RSpec.describe User, type: :features do
       click_link('register', href: '/users/sign_up')
       expect(page).to have_content('Sign up')
     end
-
   end
-
 end

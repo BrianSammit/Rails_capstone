@@ -47,3 +47,26 @@
   </div>
   <% end %>
 </div>
+
+<div class="d-flex bg_color p-5">
+ <div>
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class=" nav-link active orange_color font-weight-bolder" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">MOTOcrazy</a>
+          <a class="nav-item nav-link orange_color font-weight-bolder" id="nav-profile-tab" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-profile" aria-selected="false">Sport bike</a>
+          <a class="nav-item nav-link orange_color font-weight-bolder" id="nav-profile-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-profile" aria-selected="false">Cruiser</a>
+          <a class="nav-item nav-link orange_color font-weight-bolder" id="nav-profile-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-profile" aria-selected="false">Touring</a>
+          <a class="nav-item nav-link orange_color font-weight-bolder" id="nav-profile-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-profile" aria-selected="false">Dual sport</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><%= image_tag @articles.first.image, class: "image_fo"%> </div>
+      <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab"><%= image_tag @articles.second.image, class: "image_fo"   %></div>
+      <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab"><%= image_tag @articles.third.image, class: "image_fo"   %></div>
+      <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab"><%= image_tag @articles.fourth.image, class: "image_fo"   %></div>
+      <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-4-tab"><%= image_tag @articles.fifth.image, class: "image_fo"   %></div>
+    </div>
+
+  </div>
+  
+</div>

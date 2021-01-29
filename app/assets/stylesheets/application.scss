@@ -30,6 +30,10 @@ $yellow-color: #f99b00;
   color: $orange-color;
 }
 
+.orange_color_bg:hover {
+  background-color: $orange-color;
+}
+
 .orange_color:hover {
   color: white;
 }
@@ -86,6 +90,11 @@ $yellow-color: #f99b00;
 .image_in {
   width: 400px;
   height: 250px;
+}
+
+.image_fo {
+  width: 900px;
+  height: 500px;
 }
 
 .image_main {

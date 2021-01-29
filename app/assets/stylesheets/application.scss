@@ -13,17 +13,13 @@ $yellow-color: #f99b00;
 .footer {
   background-color: $bg-color;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   height: auto;
 }
 
 .yellow_color {
   color: $yellow-color;
-}
-
-.yellow_color:hover {
-  color: none;
 }
 
 .orange_color {
@@ -114,14 +110,12 @@ $yellow-color: #f99b00;
 .container_art {
   width: 336px;
   height: 300px;
-
 }
 
 .p_article {
   height: 150px;
   white-space: nowrap;
   overflow: hidden;
-  white-space: initial;
 }
 
 .p_article_1 {

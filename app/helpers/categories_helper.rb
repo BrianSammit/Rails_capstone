@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module CategoriesHelper
   def count_type(article, count)
     # return if article.nil?

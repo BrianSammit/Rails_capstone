@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class User < ApplicationRecord
+lass User < ApplicationRecord
   validates :name, :username, :email, :password, :password_confirmation, presence: true
   acts_as_voter
   # Include default devise modules. Others available are:

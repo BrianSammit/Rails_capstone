@@ -1,4 +1,5 @@
 #rubocop:disable Layout/EmptyLineAfterGuardClause
+
 module ArticlesHelper
   def count_type(article, count)
     return if article.nil?
@@ -15,4 +16,5 @@ module ArticlesHelper
     end
   end
 end
+
 #rubocop:enable Layout/EmptyLineAfterGuardClause

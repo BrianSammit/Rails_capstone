@@ -1,4 +1,4 @@
-#rubocop:disable Layout/EmptyLineAfterGuardClause
+# rubocop:disable Layout/EmptyLineAfterGuardClause
 
 module ArticlesHelper
   def count_type(article, count)
@@ -17,4 +17,4 @@ module ArticlesHelper
   end
 end
 
-#rubocop:enable Layout/EmptyLineAfterGuardClause
+# rubocop:enable Layout/EmptyLineAfterGuardClause

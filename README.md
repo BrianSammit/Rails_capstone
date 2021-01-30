@@ -15,7 +15,11 @@ In the original project, the forms, and the article doesn't have design, so I cr
 
 ## Live demo
 
+[live demo](https://cryptic-thicket-07460.herokuapp.com/users/sign_in)
+
 ## Video
+
+[Loom video](https://www.loom.com/share/cde6ff53ac5b4879838f462af8523dad)
 
 ## Built With
 

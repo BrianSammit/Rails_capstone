@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
     else
       @articles = Article.all.order(cached_votes_score: :desc)
     end
+    @count = 1
   end
 
   # GET /categories/1

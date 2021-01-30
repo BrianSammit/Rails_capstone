@@ -1,6 +1,7 @@
 module ArticlesHelper
   def count_type(article, count)
     return if article.nil?
+    
     category = content_tag :h4, (link_to article.category.name, article, class: 'yellow_color font-weight-bolder')
     title = content_tag :h5, (link_to article.title, article, class: 'bg_color_title font-weight-bolder')
     content = content_tag :p, truncate(strip_tags(article.body), length: 170)

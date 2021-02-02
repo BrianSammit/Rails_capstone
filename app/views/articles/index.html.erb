@@ -59,6 +59,7 @@
           <a class="nav-item nav-link orange_color font-weight-bolder" id="nav-profile-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-profile" aria-selected="false">Dual sport</a>
       </div>
     </nav>
+    <% if @articles.present?%>
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><%= image_tag @articles.first.image, class: "image_fo"%> </div>
       <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab"><%= image_tag @articles.second.image, class: "image_fo"   %></div>
@@ -66,6 +67,7 @@
       <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab"><%= image_tag @articles.fourth.image, class: "image_fo"   %></div>
       <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-4-tab"><%= image_tag @articles.fifth.image, class: "image_fo"   %></div>
     </div>
+    <% end %>
 
   </div>
   

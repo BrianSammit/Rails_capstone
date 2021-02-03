@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
  
-  Categoty.create([{ name: 'Sport bike', display_in_navbar: true }, { name: 'off-road', display_in_navbar: false }])
+  Category.create([{ name: 'Sport bike', display_in_navbar: true }, { name: 'off-road', display_in_navbar: false }])

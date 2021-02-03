@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Category.destroy_all
+Category.create([{ name: 'Spot Bikes', display_in_navbar: true  }, { name: 'off-road', display_in_navbar: false }, 
+    { name: 'Standard', display_in_navbar: true }, { name: 'Sport Touring', display_in_navbar: false }, 
+    { name: 'Cruiser', display_in_navbar: true }, { name: 'Dual Sport', display_in_navbar: false },
+    { name: 'Touring', display_in_navbar: true }, { name: 'Scooter', display_in_navbar: false }])

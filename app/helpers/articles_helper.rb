@@ -14,7 +14,7 @@ module ArticlesHelper
     else
       content_tag :div, (text + blob).html_safe, class: 'media'
     end
-  end  
+  end
 end
 
 # rubocop:enable Layout/EmptyLineAfterGuardClause

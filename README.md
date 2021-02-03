@@ -1,6 +1,6 @@
 # Rails Capstone
 
-This is the Ruby on Rails capstone project that is based on lifestyle articles website. I personalize the content to be a motorcicles articles. 
+This is the Ruby on Rails capstone project that is based on lifestyle articles website. I personalize the content to be a motorcycles articles. 
 
 You can see the original design [here](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
 Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
@@ -75,7 +75,7 @@ Give a ⭐️ if you like this project!
 
 - The Odin Project
 - Rails guides
-- Microvers
+- Microverse
 
 ## 📝 License
 

@@ -65,7 +65,7 @@ In the original project, the forms, and the article doesn't have design, so I cr
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/BrianSammit/Rails_capstone/pulls).
+Feel free to check the [issues page](https://github.com/BrianSammit/Rails_capstone/issues).
 
 ## Show your support
 

@@ -15,7 +15,7 @@ In the original project, the forms, and the article doesn't have design, so I cr
 
 ## Live demo
 
-[live demo](https://cryptic-thicket-07460.herokuapp.com/users/sign_in)
+[live demo](https://desolate-wildwood-36954.herokuapp.com/)
 
 ## Video
 

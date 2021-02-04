@@ -2,20 +2,15 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy upvote downvote]
   before_action :authenticate_user!
 
-
   def index
     @articles = Article.all.order(cached_votes_score: :desc)
   end
 
-
-  def show
-  end
-
+  def show; end
 
   def new
     @article = current_user.articles.new
   end
-
 
   def edit; end
 
@@ -45,7 +40,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-
   def destroy
     @article.destroy
     @article.destroy
@@ -67,11 +61,9 @@ class ArticlesController < ApplicationController
 
   private
 
- 
   def set_article
     @article = Article.find(params[:id])
   end
-
 
   def article_params
     params.require(:article).permit(:title, :body, :category_id, :image)

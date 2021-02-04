@@ -4,9 +4,9 @@ class CategoriesController < ApplicationController
 
   def index
     @articles = if params.key?(:category)
-                  Article.where(category: Category.find_by_name(params[:category])).order(cached_votes_score: :desc)
+                  Article.where(category: Category.find_by_name(params[:category])).includes(:category).order(cached_votes_score: :desc)
                 else
-                  Article.all.order(cached_votes_score: :desc)
+                  Article.all.includes(:category).order(cached_votes_score: :desc)
                 end
     @count = 1
   end

@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @articles = Article.all.order(cached_votes_score: :desc)
+    @articles = Article.all.includes(:category).order(cached_votes_score: :desc)
   end
 
   def show; end

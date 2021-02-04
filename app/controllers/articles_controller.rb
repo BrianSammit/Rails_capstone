@@ -4,17 +4,12 @@ class ArticlesController < ApplicationController
 
 
   def index
-    @categories = Category.all
-    if params.key?(:category)
-      @category = Category.find_by_name(params[:category])
-      @articles = Article.where(category: @category).order(cached_votes_score: :desc)
-    else
-      @articles = Article.all.order(cached_votes_score: :desc)
-    end
+    @articles = Article.all.order(cached_votes_score: :desc)
   end
 
 
-  def show; end
+  def show
+  end
 
 
   def new

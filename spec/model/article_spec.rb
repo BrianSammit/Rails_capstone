@@ -5,6 +5,7 @@ RSpec.describe Article, type: :model do
 
   describe 'associations' do
     it { should belong_to(:user) }
+    it { should have_many(:categories) }
 
     it "is valid with valid attributes" do
       expect(article).not_to be_valid

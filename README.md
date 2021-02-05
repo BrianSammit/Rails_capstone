@@ -35,11 +35,12 @@ In the original project, the forms, and the article doesn't have design, so I cr
 
 ## How to start the project from your Local enviroment
 
-- Open your terminal and cd where you can store the project
+- Open your terminal and cd where you want to store the project
 - Run the following command - `git clone https://github.com/BrianSammit/Rails_capstone.git`
 - Cd into the directory - `cd Rails_capstone`
 - Then run `Bundle install`
 - Run `rails db:migrate`
+- Run `rails db:seed`
 - Run `rails server` or `rails s`
 - Open your browser
 - Type `http://localhost:3000/`

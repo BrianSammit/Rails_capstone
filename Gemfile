@@ -64,4 +64,3 @@ gem 'faker', '~> 2.15', '>= 2.15.1'
 gem 'hirb', '~> 0.7.3'
 gem 'rubocop', '~>0.81.0'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-

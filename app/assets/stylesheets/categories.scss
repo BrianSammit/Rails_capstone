@@ -1,0 +1,21 @@
+$bg-color: rgb(78, 68, 62);
+$orange-color:rgb(253, 96, 0);
+$text-color: #989591;
+$yellow-color: #f99b00;
+
+.container_art {
+  width: 336px;
+  height: 300px;
+}
+
+.yellow_color {
+  color: $yellow-color;
+}
+
+.bg_color_title {
+  color: $bg-color;
+}
+
+.orange_color_art {
+  color: $orange-color;
+}

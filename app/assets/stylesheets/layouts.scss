@@ -1,0 +1,41 @@
+$bg-color: rgb(78, 68, 62);
+$orange-color:rgb(253, 96, 0);
+$text-color: #989591;
+$yellow-color: #f99b00;
+
+#page_container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.footer {
+  background-color: $bg-color;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  color: $orange-color;
+}
+
+.logo:hover {
+  color: $bg-color;
+}
+
+.links_color {
+  color: $text-color;
+}
+
+.links_color:hover {
+  color: $orange-color;
+}
+
+.dropdown {
+  background-color: $orange-color;
+}
+
+.dropdown-menu {
+  background-color: $bg-color;
+}

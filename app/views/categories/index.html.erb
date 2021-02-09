@@ -1,0 +1,7 @@
+<div class="d-flex flex-wrap">
+    <% @articles.each_slice(2) do |a1, b1| %>
+      <%= count_type(a1, @count) %>
+      <%= count_type(b1, @count)%>
+      <% @count += 1 %>
+    <%end%> 
+</div> 

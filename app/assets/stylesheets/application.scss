@@ -1,0 +1,35 @@
+/*
+*= require_self
+*= require_tree .
+*/
+
+@import "bootstrap/scss/bootstrap";
+
+$bg-color: rgb(78, 68, 62);
+$orange-color:rgb(253, 96, 0);
+$text-color: #989591;
+$yellow-color: #f99b00;
+
+.orange_color {
+  color: $orange-color;
+}
+
+.orange_color_bg:hover {
+  background-color: $orange-color;
+}
+
+.orange_color:hover {
+  color: white;
+}
+
+.orange_color_art:hover {
+  color: $bg-color;
+}
+
+.bg_color {
+  background-color: $bg-color;
+}
+
+.alert {
+  margin-bottom: 0;
+}

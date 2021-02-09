@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>RailsCapstone</title>
     <%= csrf_meta_tags %>
@@ -7,9 +7,120 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/cf19c7517f.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <%= yield %>
+   <div id="page_container">
+     <% if flash[:notice] %>
+     <div class="alert alert-success text-center">
+       <p class="notice mb-0"><%= notice %></p>
+     </div>
+     <% end %>
+     <% if flash[:alert] %>
+     <div class="alert alert-danger text-center">
+       <p class="alert mb-0"><%= alert %></p>
+     </div>
+     <% end %>
+     <header class="sticky-top bg_color">
+        <nav class="navbar navbar-expand-lg bg-white justify-content-between">
+          <div>
+            <%= link_to 'MOTOcrazy!!', root_path, class: "navbar-brand logo font-weight-bold"%>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="justify-content-center">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <%= link_to 'Home', root_path, class: "nav-link links_color font-weight-bolder text-uppercase" %>
+              </li>
+                <% Category.where(display_in_navbar: true).each do |cat|%>
+                <%= link_to cat.name, categories_path(category: cat.name) , class: "nav-link links_color font-weight-bolder text-uppercase"%>
+                <% end %>
+              <li>
+              <div class="dropdown rounded">
+                <button class="btn dropdown-toggle text-uppercase"
+                        type="button" id="dropdownMenu1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                  More
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <% Category.where(display_in_navbar: false).each do |cat|%>
+                  <%= link_to cat.name, categories_path(category: cat.name), class: "dropdown-item links_color font-weight-bolder text-uppercase"%>
+                  <% end %>
+                  <%= link_to "all articles", categories_path, class: "dropdown-item orange_color font-weight-bolder text-uppercase"%>
+                </div>
+                </div>
+              </li>
+          </div>
+          <div class="justify-content-center text">
+            <ul class="navbar-nav">
+              <% if current_user %>
+                <a class="nav-link text-uppercase links_color font-weight-bolder">
+                  <%= current_user.username.capitalize%>
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link links_color" href="#!">|</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-item">
+                  <%= link_to 'Create Article', new_article_path, class: "nav-link text-uppercase links_color font-weight-bolder" %>
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link links_color" href="#!">|</a>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-link text-uppercase links_color font-weight-bolder"%>
+                </li>
+              <% else %>
+                <li class="nav-item">
+                  <%= link_to 'login', new_user_session_path, class: "nav-link text-uppercase links_color font-weight-bolder" %>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link links_color" href="#!">|</a>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'register', new_user_registration_path, class: "nav-link text-uppercase  links_color font-weight-bolder" %>
+                </li>
+              <% end %>
+              <a class="nav-link">
+                <i class="fas fa-search my-subtitle links_color font-weight-bolder"></i>
+              </a>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      
+
+      <div>
+        <%= yield %>
+      </div>
+      <br>
+      <br>
+      <footer class="footer navbar justify-content-between align-items-center bg_color">
+        <div class="w-25 align-items-center">
+        <a class="text-white font-weight-bold">MOTOcrazy!!</a>
+        </div>
+        <div class="w-50 py-1">
+          <ul class="nav d-flex justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link orange_color" href="#!">Privacy Policy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link orange_color" href="#!">Terms & Conditions</a>
+            </li>
+          </ul> 
+        </div>
+        <div class="w-25 d-flex align-items-center justify-content-end">
+          <p class="text-white m-1">Connect with us:</p>
+          <i class="fab fa-twitter-square fa-2x orange_color m-1"></i>
+          <i class="fab fa-instagram-square fa-2x orange_color m-1"></i>
+          <i class="fab fa-facebook-square fa-2x orange_color m-1"></i>
+        </div>
+      </footer>
+   </div>
   </body>
 </html>

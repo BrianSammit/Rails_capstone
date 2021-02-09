@@ -1,0 +1,31 @@
+<div class="d-flex bg-white w-100 justify-content-center mb-3 mt-3">
+  <div class="w-25 p-4 m-3 bg_color rounded">
+
+    <h2 class="m-3 text-center yellow_color">Log in</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+
+    <div class="form-actions d-flex justify-content-center actions mb-2">
+    <%= f.button :submit, "Log in", class: 'btn btn-outline-warning' %>
+    </div>
+
+    <div class="text-center">
+      <%= render "devise/shared/links"%>
+    </div>
+
+    <% end %>
+
+  </div>
+</div>
+
+

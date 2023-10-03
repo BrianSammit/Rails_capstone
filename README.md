@@ -17,9 +17,6 @@ In the original project, the forms, and the article doesn't have design, so I cr
 
 [live demo](https://rocky-gorge-53007.herokuapp.com/)
 
-## Video
-
-[Loom video](https://www.loom.com/share/cde6ff53ac5b4879838f462af8523dad)
 
 ## Built With
 
